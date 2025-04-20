@@ -36720,7 +36720,7 @@ pub struct LinkedList&lt;T&gt; {
 <p>PhantomData 是我们给编译器提供一个额外的 "示例 "字段的方法，这个字段在概念上存在于你的类型中，但由于各种原因（间接、类型擦除......）并不存在。在本例中，我们使用 NonNull 是因为我们声称我们的类型 "好像 "存储了一个值 T，所以我们添加了一个 PhantomData 来明确这一点。</p>
 <p>...好吧，我们现在已经完成了布局！进入实际的基本功能！</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="basics"><a class="header" href="#basics">Basics</a></h1>
-<p>好了，这就是本书最烂的部分，也是我花了 7 年时间才写完这一章的原因！是时候把我们已经做过 5 次的枯燥乏味的东西再写一遍了，但因为我们必须使用 Option&lt;NonNull&lt;Node<T>&gt; 把每件事都做两遍，所以显得格外冗长！</p>
+<p>好了，这就是本书最烂的部分，也是我花了 7 年时间才写完这一章的原因！是时候把我们已经做过 5 次的枯燥乏味的东西再写一遍了，但因为我们必须使用 <code>Option&lt;NonNull&lt;Node&lt;T&gt;&gt;</code> 把每件事都做两遍，所以显得格外冗长！</p>
 <pre><pre class="playground"><code class="language-rust edition2021"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>impl&lt;T&gt; LinkedList&lt;T&gt; {
