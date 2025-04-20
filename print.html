@@ -9635,7 +9635,7 @@ hello, world!
 </span>eprintln!("Error: Could not complete task")
 <span class="boring">}</span></code></pre></pre>
 <p>它们仅应该被用于输出错误信息和进度信息，其它场景都应该使用 <code>print!</code> 系列。</p>
-<h2 :?="">{} 与</h2>
+<h2 id="-与-"><a class="header" href="#-与-"><code>{}</code> 与 <code>{:?}</code></a></h2>
 <p>与其它语言常用的 <code>%d</code>，<code>%s</code> 不同，Rust 特立独行地选择了 <code>{}</code> 作为格式化占位符（说到这个，有点想吐槽下，Rust 中自创的概念其实还挺多的，真不知道该夸奖还是该吐槽-,-），事实证明，这种选择非常正确，它帮助用户减少了很多使用成本，你无需再为特定的类型选择特定的占位符，统一用 <code>{}</code> 来替代即可，剩下的类型推导等细节只要交给 Rust 去做。</p>
 <p>与 <code>{}</code> 类似，<code>{:?}</code> 也是占位符：</p>
 <ul>
@@ -9679,7 +9679,7 @@ println!("{}, {}, {}, {}", i, s, v, p);
 <li>使用 <code>newtype</code> 为外部类型实现 <code>Display</code> 特征</li>
 </ul>
 <p>下面来一一看看这三种方式。</p>
-<h4 :#?=""></h4>
+<h4 id=""><a class="header" href="#"><code>{:#?}</code></a></h4>
 <p><code>{:#?}</code> 与 <code>{:?}</code> 几乎一样，唯一的区别在于它能更优美地输出内容：</p>
 <pre><code class="language-console">// {:?}
 [1, 2, 3], Person { name: "sunface", age: 18 }
@@ -29698,7 +29698,7 @@ event!(Level::TRACE, "guid:x-request-id" = "abcdef", "type" = "request");
 // TRACE test_tracing: user.name="ferris" user.email="ferris@rust-lang.org"
 // TRACE test_tracing: guid:x-request-id="abcdef" type="request"
 <span class="boring">}</span></code></pre></pre>
-<h4 id=""><a class="header" href="#">?</a></h4>
+<h4 id="-1"><a class="header" href="#-1">?</a></h4>
 <p><code>?</code> 符号用于说明该字段将使用 <code>fmt::Debug</code> 来格式化。</p>
 <pre><pre class="playground"><code class="language-rust edition2021"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
@@ -29721,7 +29721,7 @@ event!(Level::TRACE, greeting = tracing::field::debug(&amp;my_struct));
 
 // 日志输出 -&gt; TRACE test_tracing: greeting=MyStruct { field: "Hello world!" }
 <span class="boring">}</span></code></pre></pre>
-<h4 id="-1"><a class="header" href="#-1">%</a></h4>
+<h4 id="-2"><a class="header" href="#-2">%</a></h4>
 <p><code>%</code> 说明字段将用 <code>fmt::Display</code> 来格式化。</p>
 <pre><pre class="playground"><code class="language-rust edition2021"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
