@@ -38851,7 +38851,7 @@ return.front -&gt; A &lt;-&gt; B &lt;- return.back
     }
 }
 <span class="boring">}</span></code></pre></pre>
-<p>你可能注意到，我们没有处理 prev 是幽灵节点的情况。但据我所知，其他一切都只是顺便做了正确的事。等我们写测试的时候就知道了！(复制粘贴完成 split_after）。</p>
+<p>你可能注意到，我们没有处理 prev 是幽灵节点的情况。但据我所知，其他一切都只是顺便做了正确的事。等我们写测试的时候就知道了！（复制粘贴完成 split_after）。</p>
 <h1 id="splice"><a class="header" href="#splice"><a href="https://rust-unofficial.github.io/too-many-lists/sixth-cursors-impl.html#splice">Splice</a></a></h1>
 <p>还有一个老大难，那就是 splice_before 和 splice_after，我估计这是最容易出错的一个。这两个函数接收一个 LinkedList，并将其内容嫁接到我们的列表中。我们的列表可能是空的，他们的列表也可能是空的，我们还有幽灵节点要处理......叹口气，让我们一步一步来吧，从 splice_before 开始。</p>
 <ul>
@@ -38923,7 +38923,7 @@ return.front -&gt; A &lt;-&gt; B &lt;- return.back
         }
     }
 <span class="boring">}</span></code></pre></pre>
-<p>好吧，这个程序真的很可怕，现在真的感觉到 Option<NonNull> 的痛苦了。但我们可以做很多清理工作。首先，我们可以把这段代码拖到最后。</p>
+<p>好吧，这个程序真的很可怕，现在真的感觉到 <code>Option&lt;NonNull&gt;</code> 的痛苦了。但我们可以做很多清理工作。首先，我们可以把这段代码拖到最后。</p>
 <pre><pre class="playground"><code class="language-rust edition2021"><span class="boring">#![allow(unused)]
 </span><span class="boring">fn main() {
 </span>self.list.len += input.len;
