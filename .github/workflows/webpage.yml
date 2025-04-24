@@ -85,7 +85,8 @@ jobs:
             git clone --depth 1 $GIT_LINK temp_repo
           else
             echo "without agency"
-            DIR="docs/"
+            # DIR="docs/"
+            DIR="src/"
           fi
 
           # 使用指定文件夹
