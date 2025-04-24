@@ -1,5 +1,0 @@
-
-User-agent:*
-Disallow:
-
-Sitemap: https://LincDocs.github.io/rust-course/sitemap.xml
